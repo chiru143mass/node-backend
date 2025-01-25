@@ -1,8 +1,9 @@
+require('dotenv').config(); // Load environment variables from .env file
 
 const express = require('express');
-const axios = require('axios');
+const axios = require('axios'); // Ensure axios is installed
 const app = express();
-const port = 4000;
+const port = 4000; // Changed port to 4000
 
 // Middleware to parse JSON requests
 app.use(express.json());
@@ -26,7 +27,7 @@ app.post('/generate-image', async (req, res) => {
       },
       {
         headers: {
-          "Authorization": `Bearer YOUR_OPENAI_API_KEY`
+          "Authorization": `Bearer ${process.env.OPENAI_API_KEY}` // Use API key from environment variable
         }
       }
     );
@@ -42,7 +43,7 @@ app.post('/generate-image', async (req, res) => {
 // Log that the server is starting
 console.log(`Starting the server...`);
 
-// Start the server
+// Start the server on port 4000
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
