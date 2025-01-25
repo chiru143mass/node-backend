@@ -2,13 +2,17 @@ require('dotenv').config(); // Load environment variables from .env file
 
 const express = require('express');
 const axios = require('axios'); // Ensure axios is installed
+const path = require('path');
 const app = express();
-const port = 5000; // Changed port to 4000
+const port = 5000; // Server runs on port 5000
 
 // Middleware to parse JSON requests
 app.use(express.json());
 
-// A simple route
+// Serve static files from the 'publish' directory
+app.use(express.static(path.join(__dirname, 'publish')));
+
+// A simple route for testing
 app.get('/', (req, res) => {
   res.send('Hello from your Node.js server!');
 });
@@ -43,7 +47,7 @@ app.post('/generate-image', async (req, res) => {
 // Log that the server is starting
 console.log(`Starting the server...`);
 
-// Start the server on port 4000
+// Start the server on port 5000
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
