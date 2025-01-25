@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'publish')));
 
 // A simple route for testing
 app.get('/', (req, res) => {
-  res.send('Hello from your Node.js server!');
+  res.render('index');
 });
 
 // Example POST route to handle image generation
