@@ -3,7 +3,7 @@ const express = require('express');
 const axios = require('axios'); // Ensure axios is installed
 const path = require('path');
 const app = express();
-const port = 3001; // Server runs on port 5000
+const port = 3002;// Server runs on port 5000
 
 // Middleware to parse JSON requests
 app.use(express.json());
