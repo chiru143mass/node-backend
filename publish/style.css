@@ -1,0 +1,51 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  text-align: center;
+}
+
+/* Header Styling */
+header {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Main Content Styling */
+main {
+  padding: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Output Div Styling */
+#output {
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px 0;
+  background-color: #343a40;
+  color: #fff;
+}
