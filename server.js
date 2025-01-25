@@ -1,3 +1,4 @@
+
 // server.js
 const express = require('express');
 const app = express();
@@ -14,9 +15,11 @@ app.get('/', (req, res) => {
 // Example POST route to handle image generation
 app.post('/generate-image', (req, res) => {
   const { prompt, n } = req.body;
-  // Here you can handle OpenAI API request and generate image based on the prompt.
   res.json({ message: `Generating ${n} images with prompt: ${prompt}` });
 });
+
+// Log that the server is starting
+console.log(`Starting the server...`);
 
 // Start the server
 app.listen(port, () => {
