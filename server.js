@@ -3,7 +3,7 @@ require('dotenv').config(); // Load environment variables from .env file
 const express = require('express');
 const axios = require('axios'); // Ensure axios is installed
 const app = express();
-const port = 4000; // Changed port to 4000
+const port = 5000; // Changed port to 4000
 
 // Middleware to parse JSON requests
 app.use(express.json());
